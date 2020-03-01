@@ -1,14 +1,32 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      v0.0.2
+      HTTP 테스트
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  git_flow test...
+
+  <!-- GET버튼 -->
+  <button ion-button (click)=get(url)>GET 방식</button>
+
+  <ion-item>
+    <ion-label fixed>URL</ion-label>
+    <ion-input type="text" value="URL을 넣어주세요" [(ngModel)] = url></ion-input>
+  </ion-item>
+
+  <!-- 결과 값 -->
+  <ion-card>
+    <ion-card-header>
+      결과값
+    </ion-card-header>
+    <ion-card-content>
+            <p>{{service.dataToString}}</p>
+    </ion-card-content>
+  </ion-card>
+
   <p>
-    If you want information, the <a href="http://blog.naver.com/jogilsang">docs</a> will be your guide.
+    If you need help, the <a href="http://blog.naver.com/jogilsang">http://github.com/jogilsang</a> will be your guide.
   </p>
 </ion-content>
